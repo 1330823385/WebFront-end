@@ -1,0 +1,237 @@
+一、	HTML
+1.	浏览器内核
+1.1	Gecko内核 前缀：-moz- 火狐浏览器
+1.2	Webkit内核 前缀：-webkit-  也叫谷歌内核  360浏览器
+1.3	Presto内核 前缀：-o- 目前只有opera采用
+2.	基础标签
+2.1	<meta>标签永远位于 head 元素内部
+ 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0初始比例 ">对移动设备的友好，确保恰当的绘制和触屏缩放
+	<meta name="author" content="fly">author,它定义了该页面的作者
+	<meta name="keywords" content="HTML,ASP,PHP,SQL">keyword，定义html文档关键字
+	<meta http-equiv="charset" content="iso-8859-1"> charset,定义html文档的编码格式
+	<meta http-equiv="expires" content="31 Dec 2019">定义html文档到期时间
+	<meta http-equiv = "refresh" content="2; url=http://www.baidu.com" />refresh;指定时间内自动刷新，并且可跳转到指定url
+2.2	<link rel="stylesheet" href="../css/myStyle.css">
+2.2.1	链接外部资源,，最常见的用途是链接样式表
+2.2.2	<!--rel = relationship-->  注释快捷键Ctrl+/
+2.2.3	../  代表上一级目录
+2.3	<script src="js/myJs.js"></script>
+2.3.1	script 元素既可以通过 src 属性指向外部脚本文件，也可以包含脚本语句
+2.3.2	<script>alert("hello world!")</script>
+2.4	<style> p{background-color: coral}</style>
+2.4.1	style 元素位于 head 部分中
+2.4.2	用于为 HTML 文档定义样式信息
+2.5	<span> </span>
+2.5.1	用来组合行内元素，以便通过样式表来格式化
+2.6	<div></div>
+2.6.1	可定义为文档中的分区或者节，可以把文档分割为独立的，不同的部分作为元素的组织工具
+2.7	<a href="#" title=" " target="_blank" >超链接</a>
+2.7.1	target属性规定在何处打开链接文档，有以下值： 
+_blank:在新标签打开;
+	_parent：在父标签打开，这是顶级时在自身打开;
+	_self：在自身打开;
+	_top：清除所有框架，载入到浏览器窗口
+	framename
+2.8	<a href="http://www.baidu.com" target="iframeName">点击</a>
+<iframe name="iframeName" src="" width="800px" height="600">你的浏览器不支持iframe</iframe>
+2.8.1	iframe 元素会创建包含另外一个文档的内联框架（即行内框架）
+2.8.2	把需要的文本放置在 <iframe> 和 </iframe> 之间，这样就可以应对无法理解 iframe 的浏览器。
+2.9	<img src="img/01.jpg" title="图" alt="图片未显示！" align="middle" width="500px" border="1" />
+2.9.1	align的取值:  left  right  top  bottom  middle
+2.10	<p>普通文本</p>
+2.11	<h1>标题</h1>
+2.12	<br/>简单的换行符，是自闭合标签
+2.13	<hr/>是普通水平线
+2.14	<body bgcolor="#ff1493" background="img/01.jpg">
+2.15	<b>纯粹加粗文本</b>
+2.16	<strong>strong强调标签</strong>
+2.17	<del>表示文本被删除</del>
+2.18	<em>强调的内容</em>
+2.19	<i>纯斜体文本</i>
+2.20	<pre>保留空格和换行符</pre>
+2.21	<sup>上标</sup>
+2.22	<sub>下标</sub>
+2.23	<address>地址</address >
+2.24	<small>小号文本</small>
+
+3.	常见的特殊字符
+3.1	<p>大于号 &gt</p>
+3.2	<p>小于号 &lt</p>
+3.3	<p>空格 &nbsp </p>
+3.4	<p>版权 &copy</p>
+3.5	<p>递进  &raquo</p>
+3.6	<p>后退  &laquo</p>
+3.7	<p>引号 &quot</p>
+
+4.	列表标签
+4.1	<ul> 标签定义无序列表
+4.1.1	属性type:  disc(默认)  square  circle
+4.2	<ol> 标签定义有序列表
+4.2.1	属性type:  1(默认)  A  a  I  i
+4.3	<li> 标签定义列表项目
+4.3.1	用在有序列表 (<ol>) 和无序列表 (<ul>) 中
+4.4	<dl> 标签定义了定义列表（definition list）
+4.4.1	<dt> （定义列表中的项目）
+4.4.2	<dd>（描述列表中的项目）
+4.5	举例代码
+<ul type="circle">
+        <li>苹果</li>
+        <li>菠萝</li>
+        <li>橙子</li>
+    </ul>
+
+    <ol type="A"> 
+        <li>苹果</li>
+        <li>菠萝</li>
+        <li>橙子</li>
+</ol>
+
+<dl>
+    <dt>第一章</dt>
+    <dd>1</dd>
+    <dd>2</dd>
+    <dd>3</dd>
+    <dt>第二章</dt>
+    <dd>a</dd>
+    <dd>b</dd>
+    <dd>c</dd>
+</dl>
+ 
+
+5.	Table 表格
+5.1	<table> 标签定义 HTML 表格
+5.2	简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成
+5.3	<tr></tr> 元素定义表格行
+5.4	<th></th>元素定义表头
+5.4.1	属性colspan: 设置单元格可合并的列数
+5.4.2	属性rowspan: 设置单元格可合并的行数
+5.5	<td></td> 元素定义表格单元
+5.6	更复杂的 HTML 表格也可能包括 caption、col、colgroup、thead、tfoot 以及 tbody 元素
+5.7	举例代码
+<table border="1" align="center" width="500"  cellspacing="0" style="border:1px solid gray;">
+        <caption>第一阶段</caption>
+        <tr >
+            <th colspan="5" >合并5列</th>
+        </tr>
+        <tr>
+            <td>星期一</td>
+            <td>星期二</td>
+            <td>星期三</td>
+            <td>星期四</td>
+            <td>星期五</td>
+            <th rowspan="2">合并2行</th>
+        </tr>
+        <tr>
+            <td>上课</td>
+            <td>不上课</td>
+            <td>上课</td>
+            <td>上课</td>
+            <td>上课</td>
+        </tr>
+    </table>
+ 
+
+6.	Form表单
+6.1	<form> 标签为用户输入创建 HTML 表单
+6.2	作用: 表单用于向服务器传输数据
+6.3	表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等
+6.4	表单还可以包含 menus、textarea、fieldset、legend 和 label 元素
+6.5	属性action=”URL”: 规定当提交表单时向何处发送表单数据
+6.6	属性method=”post/get”: 规定用于发送 form-data 的 HTTP 方法
+6.7	属性enctype: 规定在发送表单数据之前如何对其进行编码
+ 
+6.8	属性target: 规定在何处打开 action URL
+6.8.1	_blank  _self  _parent  _top  framename  
+6.9	属性novalidate="novalidate":提交表单时不进行验证
+
+7.	<input/> 标签
+7.1	<input/> 标签用于搜集用户信息
+7.2	属性type: 输入字段可以是文本字段、复选框、掩码后的文本控件、单选按钮、按钮等等
+ 
+7.3	属性type除了上面的值外,还有email, url, number, range, search, color, date等
+7.4	属性placeholder=”请输入密码”: 规定帮助用户填写输入字段的提示
+7.5	属性checked=”checked”: 规定此 input 元素首次加载时应当被选中
+7.6	属性required=”required”: 规定文本区域是必填的
+	
+7.7	<label> 标签为 input 元素定义标注（标记）
+7.7.1	当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上
+7.7.2	<label> 标签的 for 属性的值应当与相关元素的 id 属性的值相同
+7.8	举例代码
+<html>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+        <!--post比get更安全,post不会显示在地址栏,post没大小限制,get有限制-->
+        用户名：<input type="text" name="user" placeholder="请输入用户名" required>
+        <br/>
+        密&nbsp&nbsp码：<input type="password" name="psw" placeholder="请输入密码" required>
+        <br/>
+        <input type="submit" value="提交" />       
+        <input type="reset" value="重新输入" />
+
+        <br/><!--上传文件的类型 一般要使method="post" -->
+        <input type="file" name="fileFiled" />
+        <input type="submit" value="上传" />
+
+        <!--普通按钮，需要配合js才能有提交作用-->
+        <input type="button" value="普通按钮">
+
+        <!--image类型点击图片具有提交作用，但不提倡使用，因为有时它会提交两次-->
+        <input type="image" src="img/01.jpg" width="40px">
+
+        <br/>
+        <!--元素集，字段组-->
+        <fieldset>
+            <legend>学生信息单选</legend>
+            姓名：<input type="text">
+            性别：<label for="men">男生</label><input type="radio"  name="genner" id="men">
+                  <label for="weman">女生</label><input type="radio" name="genner" id="weman">
+        </fieldset>
+ 
+        复选框a<input type="checkbox" name="worker"><br/>
+        复选框b<input type="checkbox" name="worker"><br/>
+        复选框c<input type="checkbox" name="worker"><br/>
+
+请输入邮箱:<input type="email" />
+        请输入URL地址：<input type="url" />
+        请输入数字：<input type="number" max="10" min="0" />
+        拖动滑竿改变数值：<input type="range" max="200" min="0" value="100" />
+        <br/>
+        请输入搜索关键字：<input type="search" />
+        选择你喜欢的颜色：<input type="color" />
+        请选择日期：<input type="date"/>
+
+        <br/>
+<!--多行文本，常用属性：placeholder，required，readonly-->
+<textarea cols="130" rows="6" maxlength="20" placeholder="这是提示信息必须填写" required></textarea>
+</form>
+</body>
+</html>
+ 
+
+8.	<select> 标签
+8.1	<select> 标签可创建下拉列表，单选或多选菜单
+8.2	<select> 元素是一种表单控件，可用于在表单中接受用户输入
+8.3	属性disabled=”disabled”: 规定禁用该下拉列表
+8.4	属性size=”1”: 规定下拉列表中可见选项的数目为1
+8.5	属性required=”required”: 规定文本区域是必填的
+8.6	<option> 标签
+8.6.1	option 元素位于 select 元素内部
+8.6.2	定义下拉列表中的一个选项（一个条目）
+8.6.3	如果列表选项很多，可以使用 <optgroup> 标签对相关选项进行组合
+8.6.4	属性disabled=”disabled”: 规定此选项应在首次加载时被禁用(不可选)
+8.6.5	属性selected=”selected”: 规定选项（在首次显示在列表中时）表现为选中状态
+8.7	举例代码
+<form action="" method="post" enctype="multipart/form-data">
+        <select name="" id="" size="1">
+            <optgroup label="中国">
+                <!--optgroup为option分组,不可选的-->
+                <option value="0">上海</option>
+                <option value="1" selected="selected">北京</option>
+                <option value="2" disabled="disabled">广州</option>
+                <option value="0">深圳</option>
+            </optgroup>
+        </select>
+</form>
+ 
+
